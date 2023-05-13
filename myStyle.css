@@ -40,6 +40,19 @@ body {
     flex-direction: column;
 }
 
+/* @media screen and (min-width:480px) {
+    .conatiner {
+        flex-direction: row;
+    }
+} */
+
+
+.traker-cards{
+    display: grid;
+    gap: clamp(1rem, 3vw, 2rem);
+
+}
+
 .card {
     background-color: var(--bg);
     border-radius: 1rem;
@@ -54,12 +67,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     --bg: var(--dark-blue);
+    flex: 1 1 10%;
 }
 
 
 .card--avatar-top {
     --bg: var(--primary-1);
     display: flex;
+    flex: 1 1 80%;
     gap: 1rem;
     align-items: center;
 }
@@ -99,7 +114,17 @@ h1 > span {
 .timecard .card--sm {
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
+}
+
+.timecard--top {
     position: relative;
+    overflow: hidden;
+}
+
+.icon {
+    position: absolute;
+    top: -.8rem;
+    right: .8rem;
 }
 
 .timecard .card--lg {
@@ -121,21 +146,57 @@ h1 > span {
     padding: 1rem;
 }
 
-.timecard {
+.timecard-work {
     --bg: var(--primary-2)
+}
+.timecard-play {
+    --bg: var(--primary-3)
+}
+.timecard-study {
+    --bg: var(--primary-4)
+}
+.timecard-exercise {
+    --bg: var(--primary-5)
+}
+.timecard-social {
+    --bg: var(--primary-6)
+}
+.timecard-selfcare {
+    --bg: var(--primary-7)
 }
 
 .timecard--title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+}
+
+.timecard--amt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .timecard--title .btn{
     flex: 0 1 0%;
 }
 
-.timecard-bottom
+.timecard--bottom {
+    display: grid;
+    gap: clamp(.5rem, 2vw, 2rem);
+    position: relative
+}
+
+.current {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.previous {
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--pale-blue);
+}
+
 
 h2 {
     font-size: 1rem;
@@ -173,3 +234,28 @@ h2 {
     cursor: pointer;
 }
 
+@media screen and (min-width:480px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 1200px;
+      }
+    .traker-cards {
+        flex: 1 1 80%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* .card--avatar-top {
+        flex-direction: column;
+        padding-top: ;
+    }
+     */
+}
+
+@media screen and (min-width:1024px) {
+    .traker-cards {
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
