@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* colors */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+    --primary-1: hsl(246, 80%, 60%);
+    --primary-2: hsl(15, 100%, 70%);
+    --primary-3: hsl(195, 74%, 62%);
+    --primary-4: hsl(348, 100%, 68%);
+    --primary-5: hsl(145, 58%, 55%);
+    --primary-6: hsl(264, 64%, 52%);
+    --primary-7: hsl(43, 84%, 65%);
+
+    /* for cards */
+    --bg: var(--dark-blue)
+    --transition: 200ms ease-in-out;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+    flex-direction: column;
+}
+
+.card {
+    background-color: var(--bg);
+    border-radius: 1rem;
+}
+
+.card > div{
+    background-color: var(--bg);
+}
+
+.card--avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    --bg: var(--dark-blue);
+}
+
+
+.card--avatar-top {
+    --bg: var(--primary-1);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.avatar {
+    width: clamp(5rem, 7vw, 7.5rem);
+    border: .2rem solid white;
+    border-radius: 100vw;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    flex: 1 1 20%;
+}
+
+
+
+h1 {
+    font-size: 1.2rem;
+    flex: 1 1 50%;
+    font-weight: 300;
+}
+
+h1 > span {
+    font-size: .8rem;
+    color: var(--pale-blue);
+}
+
+.card--sm {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 1rem .5rem;
+}
+
+.card-avatar .card--sm {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.timecard .card--sm {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    position: relative;
+}
+
+.timecard .card--lg {
+    --bg: var(--dark-blue);
+    cursor: pointer;
+}
+
+
+.card--avatar-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    --bg: var(--dark-blue);
+}
+
+.card--lg {
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.timecard {
+    --bg: var(--primary-2)
+}
+
+.timecard--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.timecard--title .btn{
+    flex: 0 1 0%;
+}
+
+.timecard-bottom
+
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.btn {
+    font: inherit;
+    background: inherit;
+    border: none;
+    color: var(--desaturated-blue);
+    flex: 1 1 100%;
+    border-radius: .5rem;
+    padding: .2rem .8rem;
+    box-shadow: 
+    0 0 0  -.5rem var(--bg),
+    0 0 0  -.5rem var(--primary-1);
+    transition: 
+    color var(--transition),
+    box-shadow var(--transition);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    box-shadow: 
+    0 0 0  -.5rem var(--bg),
+    0 0 0  -.5rem var(--primary-1);
+}
+
+.btn:where(.active, :hover, :focus-within) {
+    color: white;
+    cursor: pointer;
+}
+

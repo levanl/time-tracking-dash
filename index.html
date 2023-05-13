@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="myStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card card--avatar">
+            <div class="card--avatar-top card--lg">
+                <img class="avatar" src="image-jeremy.png" alt="">
+                <h1>
+                    <span> Report for</span><br>
+                    Jeremy Robson
+                </h1>
+            </div>
+            <div class="card--avatar-bottom card--sm">
+                <button class="btn">Daily</button>
+                <button class="btn active">Weekly</button>
+                <button class="btn">Monthly</button>
+            </div>
+        </div>
+        <div class="tracker-cards">
+            <div class="card timecard timecard-work">
+                <div class="card--sm"></div>
+                <div class="timecard--bottom card--lg">
+                    <div class="timecard--title">
+                        <h2>
+                            Work
+                        </h2>
+                        <button class="btn">
+                            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentColor" fill-rule="evenodd"/></svg>
+                        </button>
+                    </div>
+                    <div class="timecard--amt">
+                        <p class="current">
+                            5hrs
+                        </p>
+                        <p class="previous">
+                            yesterday ・ 7hrs
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
